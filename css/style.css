@@ -1,0 +1,842 @@
+/* 
+dark blue          #194159
+mid blue           #84c4d3
+light blue         #C1D4D9 
+yellow             #F2C12E
+*/
+/* ----------------------- initialization ----------------------- */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+body{
+    background-color: #C1D4D9;
+    perspective: 700px;
+}
+.section1, .section2,.section3,.section4,.section5,.section6,.section7{
+    width: 100%;
+    height: 85vh;
+    margin: 30px 0px ;
+}
+/* ----------------------- header ----------------------- */
+header{
+    width: 100%;
+    height: 15vh;
+}
+.upperheader{
+    width: 100%;
+    height: 70%;
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: 100% 100% 100%;
+}
+.logo{
+    margin: auto;
+}
+.header-nav{
+    width: 100%;
+    font-size: 20px;
+    text-align: center;
+    padding: 15px;
+    color: #194159;
+}
+.nav5 span i{
+    font-size: 10px;
+}
+.nav5-content{
+    width: 300px;
+    height: 150px;
+    position: absolute;
+    background-color: #F2C12E;
+    color: #194159;
+    border: 3px solid #194159;
+    font-size: 20px;
+    border-radius: 10px;
+    display: grid;
+    padding: 10px;
+    padding-left: 10px;
+    grid-template-columns: 60% 40%;
+    text-align: left;
+    top: 50px;
+    left: -5px;
+    visibility: hidden;
+    opacity: 0;
+}
+.nav5-content p{
+    font-size: 17px;
+}
+.nav5-content p:hover{
+    color: white;
+    cursor: pointer;
+    transform: scale(1.09);
+}
+.nav5:hover .nav5-content{
+    visibility: visible;
+    opacity: 100;
+    transition: 1s;
+}
+.line{
+    width: 50px;
+    height: 2px;
+    margin: 5px 0px;
+    bottom: 0;
+    background-color: #194159;
+}
+.nav{
+    display: inline-block;
+    padding: 10px;
+    margin: 0px 10px;
+    box-sizing: border-box;
+    position: relative;
+}
+.nav::after{
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transition: 0.2s;
+    border: 3px solid #F2C12E;
+    border-radius: 10px;
+    opacity: 0%;
+    visibility: hidden;
+}
+.nav:hover::after{
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 100%;
+    visibility: visible;
+}
+.nav:hover{
+    color: #F2C12E;
+}
+.header-icon{
+    margin: auto;
+    font-size: 20px;
+    position: relative;
+    color: #194159;
+}
+.header-icon i:hover{
+    color: #F2C12E;
+    cursor: pointer;
+}
+.noti{
+    width: 20px;
+    height: 20px;
+    top: -15px;
+    left: 65px;
+    position: absolute;
+    border-radius: 50%;
+    color: #194159;
+    font-size: 15px;
+    padding-left: 5px;
+    padding-top: 2px;
+    background-color: #F2C12E;
+    transform: translateY(0px);
+}
+.lowerheader{
+    width: 100%;
+    height: 30%;
+    padding: 4px;
+    background-color: #194159;
+}
+.lowerheader p{
+    text-align: center;
+    color: white;
+}
+.lowerheader p span a{
+    text-align: center;
+    color: #F2C12E;
+    transition: font-size 1s ease;
+}
+.lowerheader p span a:hover{
+    font-size: 18px;
+    color: #84c4d3;
+}
+/* ----------------------- section1 ----------------------- */
+.section1{
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    display: grid;
+    grid-template-columns: 45% 55%;
+    text-align: center;
+    padding: 200px 50px;
+    margin: 0px 0px ;
+}
+.section1 p{
+    line-height: 25px;
+    margin: 10px;
+    font-size: 20px;
+}
+.section1-title1{
+    font-size: 40px;
+    font-family: "Dancing Script", serif;
+    position: relative;
+    color: #194159;
+}
+.section1-title2{
+    font-size: 40px;
+}
+.section1-left-content button{
+    position: relative;
+    padding: 5px;
+    font-size: 25px;
+    background-color: #C1D4D9;
+    color: #194159;
+    border-radius: 10px;
+    margin: 10px 0px;
+    top: 10px;
+    transform: translate(0px , 10px);
+    animation: jump 1s forwards;
+    animation-delay: 2s;
+}
+@keyframes jump {
+    50%{
+        transform: translate(0px,30px);
+    }
+}
+.section1-left-content button:hover{
+    cursor: pointer;
+    background-color: #84c4d3;
+}
+/* ----------------------- section2 ----------------------- */
+.section2{
+    display: grid;
+    grid-template-columns: 31% 31% 31%;
+    grid-template-rows: 95%;
+    padding: 5%;
+    text-align: center;
+    font-size: 25px;
+    position: relative;
+}
+.section2-div1, .section2-div2, .section2-div3{
+    margin-left: 15%;
+    overflow: hidden;
+    position: relative;
+    border: 5px dotted #194159;
+    border-radius: 5px;
+}
+.section2-div1-img, .section2-div2-img, .section2-div3-img{
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition:transform 1s ease;
+    background-position: center;
+}
+.section2-div1-img{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260928.jpg?t=st=1735335939~exp=1735339539~hmac=2b0e8498e5fc01c5fedae2216d1f01e73d7b3cabf977744a2ce91b1c474b8262&w=360");
+}
+.section2-div2-img{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260967.jpg?t=st=1735335992~exp=1735339592~hmac=988b74a6a84268834625085dfc99f02b3fe3ec3d90829092ccf6876b77526533&w=360");
+}
+.section2-div3-img{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260930.jpg?t=st=1735335844~exp=1735339444~hmac=0d26c2e6b098a01fe4eb36a4463ca0c4aa4143ab53a1b989cde303d44cea2283&w=360");
+}
+.overlay{
+    width: 100%;
+    height: 100%;
+    background: -webkit-linear-gradient(bottom,black,rgba(0,0,0,0));
+}
+.section2-div1:hover .section2-div1-img, .section2-div2:hover .section2-div2-img, .section2-div3:hover .section2-div3-img{
+    transform: scale(1.1);
+}
+.section2-div1-content , .section2-div2-content , .section2-div3-content{
+    position: absolute;
+    margin: 0px 30%;
+    margin-top: -80px;
+    color: white;
+    transition: margin-top 1s ease;
+}
+.section2-div1-content  a , .section2-div2-content  a , .section2-div3-content  a{
+    text-decoration: none;
+    color: #84c4d3;
+}
+.section2-div1:hover .section2-div1-content, .section2-div2:hover .section2-div2-content, .section2-div3:hover .section2-div3-content{
+    margin-top: -130px;
+}
+.hidden{
+    width: 24%;
+    height: 50px;
+    background-color: #C1D4D9;
+    position: absolute;
+    top: 500px;
+}
+/* ----------------------- section3 ----------------------- */
+.section3{
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 10% 85%;
+    grid-row-gap: 5%;
+}
+.section3-upper{
+    padding: 0.5% 3%;
+    color: #194159;
+}
+.section3-upper h2{
+    font-size: 30px;
+}
+.section3-upper-nav{
+    position: relative;
+    margin-left: auto;
+    margin-top: 5px;
+    float: right;
+    word-spacing: 5px;
+    font-size: 18px;
+}
+.section3-upper-nav h4:hover{
+    cursor: pointer;
+    color: #F2C12E;
+}
+.section3-upper h2, .section3-upper-nav h4{
+    display: inline-block;
+}
+.section3-upper-nav-line{
+    position: absolute;
+    width: 80px;
+    height: 5px;
+    background-color: #F2C12E;
+    position: absolute;
+    margin: 5px 40px;
+}
+.section3-upper-line{
+    width: 100%;
+    height: 1px;
+    background-color: #194159;
+    margin: 0.5% 0px;
+}
+.section3-lower{
+    display: grid;
+    grid-template-columns: 2% 23% 23% 23% 23% 2%;
+    grid-column-gap: 1%;
+}
+.section3-lower-div1 , .section3-lower-div2 , .section3-lower-div3 , .section3-lower-div4 {
+    padding: 5%;
+    background-color: #194159;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+} 
+.section3-img1, .section3-img2, .section3-img3, .section3-img4{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    transition: 1s ease;
+    transform-style:preserve-3d ;
+    margin-bottom: 20px;
+}
+.section3-lower-div1-front , .section3-lower-div1-back , 
+.section3-lower-div2-front , .section3-lower-div2-back , 
+.section3-lower-div3-front , .section3-lower-div3-back , 
+.section3-lower-div4-front , .section3-lower-div4-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    border: 3px solid #84c4d3;
+}
+.section3-lower-div1-front,.section3-lower-div2-front,.section3-lower-div3-front,.section3-lower-div4-front{
+    z-index: 1;
+    backface-visibility: hidden;
+}
+.section3-lower-div1-back , .section3-lower-div2-back , .section3-lower-div3-back , .section3-lower-div4-back {
+    transform: rotateY(180deg);
+}
+.section3-img1:hover, .section3-img2:hover, .section3-img3:hover, .section3-img4:hover{
+    transform: rotateY(180deg);
+}
+.section3-lower-div1-front{
+    background-position: unset;
+    background-image: url("https://img.freepik.com/premium-photo/portrait-young-woman-standing-against-yellow-background_1048944-17655772.jpg?w=360");
+}
+.section3-lower-div1-back{
+    background-position: unset;
+    background-image: url("https://img.freepik.com/premium-photo/portrait-young-woman-standing-against-yellow-background_1048944-12998533.jpg?w=360");
+}
+.section3-lower-div2-front{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260910.jpg?t=st=1735420317~exp=1735423917~hmac=a725954b457ec27e42c00c8ff4f4307e2500477712e5a02307ca67e080c7c447&w=360");
+}
+.section3-lower-div2-back{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260964.jpg?t=st=1735420333~exp=1735423933~hmac=a3337aac97bfdfc86319b0e751f2dc9aedc179b630feb56402fbecbb0a8f1d59&w=360");
+}
+.section3-lower-div3-front{
+    background-image: url("https://img.freepik.com/free-photo/portrait-handsome-confident-stylish-hipster-lambersexual-modelman-dressed-green-sweater-jeans-fashion-male-posing-studio-near-white-wall_158538-24094.jpg?t=st=1735420706~exp=1735424306~hmac=dc90283b0882912fdb010918b3ec7995cdd1a85ab2535b832ec2ae327192ded5&w=900");
+}
+.section3-lower-div3-back{
+    background-position: right;
+    background-image: url("https://img.freepik.com/free-photo/portrait-handsome-confident-stylish-hipster-lambersexual-modelman-dressed-green-sweater-jeans-fashion-male-posing-studio-near-white-wall_158538-24100.jpg?t=st=1735433713~exp=1735437313~hmac=8f07e2d421ce90439e544f2a2448cd4105549c709a5825453e44b39ba16c862d&w=996");
+}
+.section3-lower-div4-front{
+    background-position: unset;
+    background-image: url("https://img.freepik.com/free-photo/happy-young-man-laughing_23-2148911859.jpg?t=st=1735420785~exp=1735424385~hmac=7352c3b5a25e2709806414d492c97753f1b3c443792b9f5ecf6676591d1c43f9&w=360");
+}
+.section3-lower-div4-back{
+    background-position: unset;
+    background-image: url("https://img.freepik.com/free-photo/happy-young-man-laughing_23-2148911862.jpg?t=st=1735420802~exp=1735424402~hmac=543267a8e9a92609b4581504aa17d5b5d5dc403b215eb1b2619c89b3555bb3bc&w=360");
+}
+.price{
+    font-size: 20px;
+}
+.section3-hidden-icons{
+    padding: 1%;
+    margin: auto;
+    width: 40%;
+    color: white;
+    background-color: #F2C12E;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    visibility: hidden;
+    opacity: 0;
+}
+.section3-hidden-icons i:hover{
+    color: #194159;
+    cursor: pointer;
+}
+.section3-img1:hover .section3-hidden-icons1, 
+.section3-img2:hover .section3-hidden-icons2, 
+.section3-img3:hover .section3-hidden-icons3, 
+.section3-img4:hover .section3-hidden-icons4{
+    animation-name: hide ;
+    visibility: visible;
+    opacity: 100%;
+    transition: 4s;
+    cursor: pointer;
+}
+.fa-chevron-right3,.fa-chevron-left3{
+    color: #194159;
+    font-size: 40px;
+    margin-top: 200px;
+}
+.fa-chevron-right3:hover,.fa-chevron-left3:hover{
+    color: #F2C12E;
+    cursor: pointer;
+}
+/* ----------------------- section4 ----------------------- */
+.section4{
+    background-color: #84c4d3;
+    height: 50vh;
+    padding: 1% 4%;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    grid-column-gap: 1%;
+    text-align: center;
+    color: #194159;
+}
+.section4 i{
+    position: relative;
+    color: #194159;
+    font-size: 40px;
+    top:40%
+}
+.section4 i:hover{
+    color: #F2C12E;
+    cursor: pointer;
+}
+.fa-chevron-left4{
+    text-align: right;
+}
+.fa-chevron-right4{
+    text-align: left;
+}
+.section4-content{
+    padding: 3% 6%;
+    display: grid;
+    grid-template-rows: 50% 50%;
+}
+.section4-uppercontent{
+    padding: 2%;
+}
+.section4-uppercontent p{
+    font-size: 20px;
+}
+.section4-lowercontent{
+    display: grid;
+    grid-template-columns: 50% 50%;
+    font-size: 1.3em;
+}
+.section4-img{
+    width: 130px;
+    height: 130px;
+    margin: 0px 25px;
+    border-radius: 50%;
+    background-image: url("https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?cs=srgb&dl=pexels-justin-shaifer-501272-1222271.jpg&fm=jpg");
+    background-position: center;
+    margin-left: auto;
+    background-size: cover;
+}
+.section4-lowercontent h4{
+    text-align: left;
+    padding: 10% 0px;
+}
+/* ----------------------- section5 ----------------------- */
+.section5{
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 10% 85%;
+    grid-row-gap: 5%;
+}
+.section5-upper{
+    padding: 0.5% 3%;
+    color: #194159;
+    margin: auto;
+    font-size: 20px;
+}
+.section5-upper h2{
+    display: inline-block;
+}
+.section5-upper-line{
+    width: 100%;
+    height: 1px;
+    background-color: #194159;
+    margin: 0.5% 0px;
+}
+.section5-lower{
+    display: grid;
+    grid-template-columns: 2% 23% 23% 23% 23% 2%;
+    grid-column-gap: 1%;
+}
+.section5-lower-div1 , .section5-lower-div2 , .section5-lower-div3 , .section5-lower-div4 {
+    padding: 5%;
+    background-color: #194159;
+    position: relative;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    border-radius: 5px;
+} 
+.section5-img1, .section5-img2, .section5-img3, .section5-img4{
+    width: 100%;
+    height: 80%;
+    position: relative;
+    margin-bottom: 20px;
+    background-size: cover;
+    background-position: center;
+}
+.section5-img1{
+    background-image: url("https://img.freepik.com/free-photo/sportsman_23-2148023798.jpg?t=st=1735432076~exp=1735435676~hmac=94f2921dac717129c9cd9f98f598ff7f724015755c45fa9f1cd480f79a7105f9&w=360");
+}
+.section5-img2{
+    background-image: url("https://img.freepik.com/free-photo/medium-shot-man-wearing-jacket_23-2148895220.jpg?t=st=1735433843~exp=1735437443~hmac=ca9b1cdd359e289aa9842c5773d830ebdc72c38279cd9e30806818d1d629d6f1&w=360");
+}
+.section5-img3{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260966.jpg?t=st=1735432857~exp=1735436457~hmac=22c541c99c3219aedb2afdd2e10065671cc784daff68df2034b53f29838bd6b9&w=360");
+}
+.section5-img4{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-attractive-male-model-color-flash-light_158595-5114.jpg?t=st=1735432638~exp=1735436238~hmac=636cc2dfa9d2508e166b2cd214b72047f24b5c1c99685c26aa9e03aef2baba43&w=996");
+}
+.section5-img1::after, .section5-img2::after, .section5-img3::after, .section5-img4::after{
+    content: "";
+    width: 100%;
+    height: 0%;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: all 1s ease;
+    visibility: hidden;
+    position: absolute;
+}
+.section5-img1::after{
+    background-position: center;
+    background-image: url("https://img.freepik.com/free-photo/sportsman_23-2148023800.jpg?t=st=1735433326~exp=1735436926~hmac=2a5db37a60370d5d1d16a1febcdc1b7744ffb050fece444d6c40f948adace69a&w=360")
+}
+.section5-img2::after{
+    background-position: top;
+    background-image: url("https://img.freepik.com/free-photo/medium-shot-smiley-man-low-angle_23-2148895209.jpg?ga=GA1.1.327221076.1720003153&semt=ais_hybrid")
+}
+.section5-img3::after{
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-man-shirt-mockup_23-2149260965.jpg?t=st=1735433174~exp=1735436774~hmac=e46bf37fc0c72dc023fa8f87f396f2e0f9e482f89d46408625faa6f2d14531f2&w=360")
+}
+.section5-img4::after{
+    background-position: top;
+    background-image: url("https://img.freepik.com/free-photo/close-up-portrait-attractive-male-model-color-flash-light_158595-5115.jpg?t=st=1735433395~exp=1735436995~hmac=cdfb1d3064e35a0a5847e024157ee0dc40520a5b4d64c865c1f975c27694785f&w=996")
+}
+.section5-img1:hover::after, .section5-img2:hover::after, .section5-img3:hover::after, .section5-img4:hover::after{
+    width: 100%;
+    height: 100%;
+    top:0;
+    left:0;
+    opacity: 1;
+    visibility: visible;
+}
+.price{
+    font-size: 20px;
+}
+.section5-hidden-icons{
+    padding: 1%;
+    margin: auto;
+    width: 40%;
+    color: white;
+    background-color: #F2C12E;
+    text-align: center;
+    font-size: 30px;
+    position: absolute;
+    left: 30%;
+    top: 85%;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 20;
+}
+.section5-hidden-icons i:hover{
+    color: #194159;
+    cursor: pointer;
+}
+.section5-img1:hover .section5-hidden-icons1, 
+.section5-img2:hover .section5-hidden-icons2, 
+.section5-img3:hover .section5-hidden-icons3, 
+.section5-img4:hover .section5-hidden-icons4{
+    animation-name: hide ;
+    visibility: visible;
+    opacity: 100%;
+    transition: 4s;
+    cursor: pointer;
+}
+.fa-chevron-right5,.fa-chevron-left5{
+    color: #194159;
+    font-size: 40px;
+    margin-top: 200px;
+}
+.fa-chevron-right5:hover,.fa-chevron-left5:hover{
+    color: #F2C12E;
+    cursor: pointer;
+}
+/* ----------------------- section6 ----------------------- */
+.section6{
+    height: 95vh;
+    padding: 2%;
+    display: grid;
+    grid-template-rows: 5% 90%;
+    grid-row-gap: 5%;
+    margin: 100px 0px;
+}
+.section6-upper{
+    padding: 0.5% 3%;
+    color: #194159;
+    margin: auto;
+    font-size: 20px;
+}
+.section6-upper-line{
+    width: 100%;
+    height: 1px;
+    background-color: #194159;
+    margin: 0.5% 0px;
+}
+.section6-lower{
+    display: grid;
+    grid-template-columns:32% 32% 32%;
+    grid-column-gap: 1.6%;
+    padding: 0px 1%;
+}
+.section6-lower-div1 , .section6-lower-div2 , .section6-lower-div3 {
+    padding: 5%;
+    background-color: #194159;
+    position: relative;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+    line-height: 25px;
+    border: 5px solid #84c4d3;
+}
+.section6-lower-div1 h4, .section6-lower-div2 h4, .section6-lower-div3 h4{
+    font-size: 25px;
+    color: #F2C12E;
+    margin-bottom: 5px;
+}
+.section6-lower-div1 p, .section6-lower-div2 p, .section6-lower-div3 p{
+    line-height: 18px;
+    margin-bottom: 5px;
+}
+.section6-lower-div1 a, .section6-lower-div2 a, .section6-lower-div3 a{
+    display: block;
+    text-align: center;
+    color: #84c4d3;
+    font-size: 25px;
+    margin-top: 20px;
+}
+.section6-img1+p , .section6-img2+p , .section6-img3+p{
+    margin-top: 10px;
+    color: #84c4d3;
+}
+.section6-lower-div1 a:hover, .section6-lower-div2 a:hover, .section6-lower-div3 a:hover{
+    color: #F2C12E;
+    animation: bigger 1s forwards;
+}
+.section6-img1, .section6-img2, .section6-img3{
+    width: 100%;
+    height: 70%;
+    position: relative;
+    margin-bottom: 10px;
+    background-size: cover;
+    background-position: center;
+    transition: transform 1s;
+}
+.section6-img1:hover, .section6-img2:hover, .section6-img3:hover{
+    transform: scale(1.05);
+}
+.section6-img1{
+    background-image: url("https://static1.squarespace.com/static/56314693e4b0f04840290588/563147efe4b032b9df44ec5c/5bc5add78165f5b951fc981b/1573550232617/Screen+Shot+2018-10-16+at+16.28.26.png?format=1500w");
+}
+.section6-img2{
+    background-image: url("https://www.i-eventplanner.com/wp-content/uploads/2015/05/Business-Event-Planning1.jpg");
+}
+.section6-img3{
+    background-image: url("https://www.emg.co.in/images/corporate-event-header.jpg");
+}
+/* ----------------------- section7 ----------------------- */
+.section7{
+    height: 30vh;
+    background-color: #84c4d3;
+    padding: 2% 4%;
+    display: grid;
+    grid-column-gap: 1%;
+    grid-template-columns:24% 24% 24% 24%;
+    text-align: center;
+    margin: 50px 0px;
+}
+.section7-div1 , .section7-div2 , .section7-div3 , .section7-div4{
+    padding: 5% 0;
+    font-size: 20px;
+    color: white;
+    border-radius: 5px;
+}
+.section7-div1 i, .section7-div2 i, .section7-div3 i , .section7-div4 i{
+    font-size: 50px;
+    margin-bottom: 15px;
+    color: #194159;
+}
+.section7-div1:hover i, .section7-div2:hover i, .section7-div3:hover i , .section7-div4:hover i{
+    color: #F2C12E;
+}
+.section7-div1 h4, .section7-div2 h4, .section7-div3 h4 , .section7-div4 h4{
+    font-size: 25px;
+    color: #194159;
+}
+.section7-div1 p, .section7-div2 p, .section7-div3 p , .section7-div4 p{
+    line-height: 25px;
+    margin-bottom: 5px;
+}
+/* ----------------------- footer ----------------------- */
+footer{
+    height: 80vh;
+    margin: 0;
+    background-color: #194159;
+    display: grid;
+    grid-template-rows: 25% 65% 10%;
+    padding: 0.5% 3%;
+}
+.footer-upper{
+    display: grid;
+    grid-template-columns: 30% 45% 16%;
+    grid-column-gap: 3%;
+    padding: 0% 1%;
+    border-bottom: 2px solid #84c4d3;
+}
+.footer-upper-title{
+    padding-top: 8%;
+}
+.footer-upper-title h3{
+    font-size: 30px;
+    color: #84c4d3;
+}
+.footer-upper-title p{
+    color: white;
+}
+.footer-upper-search {
+    padding-top: 6%;
+}
+.footer-upper-search input{
+    width: 50%;
+    height: 50%;
+    border-style: none;
+    font-size: 20px;
+    padding: 2%;
+}
+.footer-upper-search button{
+    width: 20%;
+    height: 50%;
+    padding: 0.5%;
+    margin-left: 10px;
+    font-size: 20px;
+    border-style: none;
+    background-color: #84c4d3;
+    color: #194159;
+}
+.footer-upper-search button:hover{
+    cursor: pointer;
+    background-color: #F2C12E;
+    color: white;
+    animation: bigger 1s forwards;
+}
+.footer-upper-icon{
+    padding-top: 20%;
+}
+.footer-upper-icon i{
+    font-size: 40px;
+    color: #C1D4D9;
+    margin-left: 5px;
+}
+.footer-upper-icon i:hover{
+    color: #F2C12E;
+    animation: bigger 1s forwards;
+    cursor: pointer;
+}
+.footer-mid{
+    display: grid;
+    grid-template-columns: 15% 20% 20% 20% 20%;
+    grid-column-gap: 1%;
+    padding: 1% 1%;
+    border-bottom: 2px solid #84c4d3;
+}
+.footer-mid-logo{
+    background-image: url("../images/logo.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+.footer-mid-div1,.footer-mid-div2,.footer-mid-div3,.footer-mid-div4{
+    width: 100%;
+    height: 100%;
+    padding-left: 30px;
+    transform: translate(0%,20%);
+}
+.footer-mid-div1 ul,.footer-mid-div2 ul,.footer-mid-div3 ul,.footer-mid-div4 ul{
+    list-style-type: none;
+    line-height: 30px;
+}
+.footer-mid-div1 h2,.footer-mid-div2 h2,.footer-mid-div3 h2,.footer-mid-div4 h2{
+    color: #84c4d3;
+}
+.footer-mid-div1 a,.footer-mid-div2 a,.footer-mid-div3 a,.footer-mid-div4 a{
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+.footer-mid-div1 a:hover,.footer-mid-div2 a:hover,.footer-mid-div3 a:hover,.footer-mid-div4 a:hover{
+    text-decoration: underline;
+    color: #F2C12E;
+    animation: bigger 1s forwards;
+}
+.footer-lower{
+    text-align: center;
+    font-size: 1.1em;
+    color: #C1D4D9;
+    padding: 1%;
+}
+.footer-lower i{
+    color: #F2C12E;
+    animation: bigger 1s forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes bigger {
+    50%{
+        transform: scale(1.1,1.1);
+    }
+}
