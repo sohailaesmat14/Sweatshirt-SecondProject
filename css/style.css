@@ -196,7 +196,7 @@ header{
 }
 @keyframes jump {
     50%{
-        transform: translate(0px,30px);
+        transform: translate(0px,10px);
     }
 }
 .section1-left-content button:hover{
@@ -714,6 +714,7 @@ header{
 }
 .section7-div1:hover i, .section7-div2:hover i, .section7-div3:hover i , .section7-div4:hover i{
     color: #F2C12E;
+    animation : jump 1s forwards
 }
 .section7-div1 h4, .section7-div2 h4, .section7-div3 h4 , .section7-div4 h4{
     font-size: 25px;
